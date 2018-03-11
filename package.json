@@ -1,0 +1,10 @@
+{
+  "name": "echarts-china-counties-js",
+  "version": "1.0.0",
+  "description": "Packages the maps of Chinese counties for echarts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "C.W.",
+  "license": "Apache V2"
+}

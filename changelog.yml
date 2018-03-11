@@ -1,0 +1,7 @@
+releases:
+- changes:
+  - action: Added
+    details:
+    - initial release
+  date: unrelease
+  version: 1.0.0
