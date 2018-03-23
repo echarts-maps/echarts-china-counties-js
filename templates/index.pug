@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    style(type="text/css").
+      .cities {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      .cities li {
+        display: inline
+      }
+  body
+    ul
+      each province, key in provinces
+        li=key
+          ul
+            each city, cityName in province
+              li=cityName
+                ul.cities
+                  each xian in city
+                    li=xian
