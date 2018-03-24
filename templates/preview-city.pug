@@ -11,9 +11,9 @@ html
       body {
          background-color: #eee;
       }
-    script(src="/echarts.min.js")
+    script(src="../echarts.min.js")
     each value, index in FILE_MAP
-      script(src="/"+JS_FOLDER+"/"+value+".js")
+      script(src="../"+JS_FOLDER+"/"+value+".js")
   body
     table
       each city_dict, city_name in pinyin_map
@@ -28,7 +28,7 @@ html
             td
               div(id=file,class="map")
             - n++
-    script(src="/demo.js")
+    script(src="../demo.js")
     script
       each city_dict, city_name in pinyin_map
         each region, index in city_dict
