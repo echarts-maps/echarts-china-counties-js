@@ -1,0 +1,45 @@
+# echarts-china-counties-js
+
+提供 {{count}} 中国县·区。
+
+Supply {{count}} Chinese countries and districts.
+
+## 安装 - Installation
+
+```
+npm install echarts-china-counties-js
+```
+
+## 内容 - Content
+
+{% for province in profiles.keys() %}
+
+### {{ province }}
+| 城市 - City | 县·区 - County or District|
+|------------|---------------------------|
+{%- for city, counties in profiles[province].items() %}
+|{{city}}    | {{counties | join(',')}}  |{% endfor %}
+
+{% endfor %}
+
+
+## License
+
+The geojson files are derived from AMap.com(高德地图). Hence are subjected to AMap's [service and content license](https://lbs.amap.com/home/terms/).
+
+**No content right** have been transferred to you and you shall **engage AMap.com** before
+making commercial applications using the files in this package. No Liability nor Guarantee were
+given for any error or flaws in the downloaded files.
+
+### Free usage instructions
+
+Similiar to google's map data, it is free as long as the public's access to your files
+are free. 
+
+
+## Maintenance
+
+```
+gulp
+python readme.py
+```

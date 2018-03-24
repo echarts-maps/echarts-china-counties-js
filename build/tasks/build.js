@@ -6,6 +6,7 @@ const pinyin = require('pinyin');
 const constants = require('../constants');
 const FILES = 'src/**/*.geojson';
 const pug = require('pug');
+const jinja2 = require('jinja-js');
 
 const DUPLICATED = [
 '市中区',
@@ -142,13 +143,6 @@ gulp.task("index", () => {
   }
   fs.writeFileSync(path.join('pages', 'index.html'), index({provinces:provinces}));
 });
-
-gulp.task("readme", () => {
-  var index = pug.compileFile(path.join("templates", "index.pug"));
-  var profile = JSON.parse(fs.readFileSync('profile.json'));
-  fs.writeFileSync(path.join('pages', 'index.html'), index({provinces:JSON.stringify(provinces)}));
-});
-
 
 
 function getPinyin(Chinese_words){
