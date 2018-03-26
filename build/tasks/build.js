@@ -95,7 +95,7 @@ gulp.task("counties", function(){
       }
       pinyinMap[countyName] = fileName;
       fileMap[fileName] = fileName;
-      //maker.makeJs(afile, targetJs, countyName);
+      maker.makeJs(afile, targetJs, countyName);
     }
   }
   var registry = JSON.parse(fs.readFileSync('registry.json'))
@@ -141,6 +141,12 @@ gulp.task("index", () => {
   for(province of Object.keys(profile)){
     provinces[province] = getPinyin(province);
   }
+  provinces['天津'] = 'zhi2xia2shi4';
+  provinces['北京'] = 'zhi2xia2shi4';
+  provinces['上海'] = 'zhi2xia2shi4';
+  provinces['重庆'] = 'zhi2xia2shi4';
+  provinces['香港'] = 'zhi2xia2shi4';
+  provinces['澳门'] = 'zhi2xia2shi4';
   fs.writeFileSync(path.join('pages', 'index.html'), index({provinces:provinces}));
 });
 
