@@ -1,4 +1,5 @@
 import json
+import pinyin
 import codecs
 from jinja2 import Environment, FileSystemLoader
 
@@ -15,6 +16,11 @@ if __name__ == '__main__':
         keep_trailing_newline=True)
 
     readme = jinja2_env.get_template('readme.md.jj2')
-    md = readme.render(profiles=content, count=len(registry['FILE_MAP']))
+    sorted_provinces = sorted(content.keys(),
+                              key=lambda x: pinyin.get(x, format='numerical'))
+    md = readme.render(profiles=content,
+                       sorted_provinces=sorted_provinces,
+                       file_map=registry['PINYIN_MAP'],
+                       count=len(registry['FILE_MAP']))
     with codecs.open('README.md', 'w', 'utf-8') as out:
         out.write(md)

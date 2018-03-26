@@ -12,13 +12,13 @@ npm install echarts-china-counties-js
 
 ## 内容 - Content
 
-{% for province in profiles.keys() %}
+{% for province in sorted_provinces %}
 
 ### {{ province }}
 | 城市 - City | 县·区 - County or District|
 |------------|---------------------------|
 {%- for city, counties in profiles[province].items() %}
-|{{city}}    | {{counties | join(',')}}  |{% endfor %}
+|{{city}}    | {%- for county in counties %} <a href="https://echarts-maps.github.io/echarts-china-counties-js/echarts-china-counties-js/{{file_map[county]}}.js">{{county}}</a> {%- endfor%}  |{% endfor %}
 
 {% endfor %}
 

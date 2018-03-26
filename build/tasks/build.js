@@ -95,7 +95,7 @@ gulp.task("counties", function(){
       }
       pinyinMap[countyName] = fileName;
       fileMap[fileName] = fileName;
-      maker.makeJs(afile, targetJs, countyName);
+      //maker.makeJs(afile, targetJs, countyName);
     }
   }
   var registry = JSON.parse(fs.readFileSync('registry.json'))
