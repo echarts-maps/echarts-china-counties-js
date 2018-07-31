@@ -40,6 +40,8 @@ are free.
 ## Maintenance
 
 ```
+npm install
+gulp counties
 gulp
 python readme.py
 ```

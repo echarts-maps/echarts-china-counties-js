@@ -6,7 +6,7 @@ const pinyin = require('pinyin');
 const constants = require('../constants');
 const FILES = 'src/**/*.geojson';
 const pug = require('pug');
-const jinja2 = require('jinja-js');
+const crypto = require('crypto');
 
 const DUPLICATED = [
 '市中区',
@@ -78,7 +78,8 @@ gulp.task("counties", function(){
           .replace('区', '')
           .replace('县', '');
       fileName = getPinyin(fileName);
-      var targetJs = path.join(constants.dist, `${fileName}.js`);
+      physicalFileName = getHash(fileName);
+      var targetJs = path.join(constants.dist, `${physicalFileName}.js`);
 
       if(DUPLICATED.indexOf(countyName)!==-1){
         countyName = cityName + countyName;
@@ -94,8 +95,8 @@ gulp.task("counties", function(){
         provinces[province][cityName] =  [countyName];
       }
       pinyinMap[countyName] = fileName;
-      fileMap[fileName] = fileName;
-      //maker.makeJs(afile, targetJs, countyName);
+      fileMap[fileName] = physicalFileName;
+      maker.makeJs(afile, targetJs, countyName);
     }
   }
   var registry = JSON.parse(fs.readFileSync('registry.json'))
@@ -156,4 +157,11 @@ function getPinyin(Chinese_words){
 	    style: pinyin.STYLE_TONE2
 	});
     return py.join('');
+}
+
+
+function getHash(longPinYin){
+  const hash = crypto.createHash('md5').update(longPinYin).digest('hex');
+  console.log(hash);
+  return hash;
 }

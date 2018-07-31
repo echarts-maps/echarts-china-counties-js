@@ -1,7 +1,15 @@
+name: echarts-china-conties-js
+organisation: echarts-maps
 releases:
+- changes:
+  - action: Updated
+    details:
+    - "[#1](https://github.com/echarts-maps/echarts-china-conties-js/issues/1), shorten file names"
+  date: 31.07.2018
+  version: 1.0.1
 - changes:
   - action: Added
     details:
     - initial release
-  date: unrelease
+  date: 01.04.2018
   version: 1.0.0
