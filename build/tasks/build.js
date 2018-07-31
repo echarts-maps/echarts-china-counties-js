@@ -125,7 +125,7 @@ gulp.task("provinces", () => {
         const countyName = profile[province][city][county];
         const fileName = registry.PINYIN_MAP[countyName];
         sub_pinyin_map[city][countyName] = fileName;
-        sub_file_map[fileName] = fileName;
+        sub_file_map[fileName] = registry.FILE_MAP[fileName];
       }
     }
     var preview = pug.compileFile(path.join("templates", "preview-city.pug"));
