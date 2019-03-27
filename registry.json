@@ -1,6 +1,6 @@
 {
     "JUPYTER_URL": "/nbextensions/echarts-china-counties-js",
-    "GITHUB_URL": "https://echarts-china-counties-js.github.io/echarts-china-counties-js/echarts-china-counties-js",
+    "GITHUB_URL": "https://echarts-maps.github.io/echarts-china-counties-js/echarts-china-counties-js",
     "JUPYTER_ENTRY": "echarts-china-counties-js/index",
     "JS_FOLDER": "echarts-china-counties-js",
     "PINYIN_MAP": {
