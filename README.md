@@ -561,6 +561,8 @@ The geojson files are derived from AMap.com(高德地图). Hence are subjected t
 making commercial applications using the files in this package. No Liability nor Guarantee were
 given for any error or flaws in the downloaded files.
 
+This projects is NOT associated with official Apache ECharts (incubating) project and is independently maintained by [@chfw](https://github.com/chfw).
+
 ### Free usage instructions
 
 Similiar to google's map data, it is free as long as the public's access to your files
