@@ -4,7 +4,8 @@ releases:
 - changes:
   - action: Updated
     details:
-    - "[#1](https://github.com/echarts-maps/echarts-china-conties-js/issues/8), add taiwan"
+    - "[#1](https://github.com/echarts-maps/echarts-china-conties-js/issues/8), added taiwan"
+    - "[#1](https://github.com/echarts-maps/echarts-china-conties-js/issues/5), moved cang zhou"
   date: 28.12.2025
   version: 1.0.2
 - changes:
