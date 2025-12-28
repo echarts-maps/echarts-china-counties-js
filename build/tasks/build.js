@@ -95,8 +95,9 @@ gulp.task("counties", function(){
         provinces[province][cityName] =  [countyName];
       }
       pinyinMap[countyName] = fileName;
-      fileMap[fileName] = physicalFileName;
-      maker.makeJs(afile, targetJs, countyName);
+	fileMap[fileName] = physicalFileName;
+	console.log(afile)
+      //maker.makeJs(afile, targetJs, countyName);
     }
   }
   var registry = JSON.parse(fs.readFileSync('registry.json'))
