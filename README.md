@@ -603,7 +603,6 @@ It comes from this link: https://data.gov.tw/dataset/7441 and is protected under
 
 ```
 npm install
-gulp counties
 gulp
 python readme.py
 ```
