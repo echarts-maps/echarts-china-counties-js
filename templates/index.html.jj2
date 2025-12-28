@@ -48,7 +48,7 @@
 		  <span class="big">https://echarts-maps.github.io/echarts-china-counties-js</span><p>
 			<a class="github-button" href="https://github.com/echarts-maps/echarts-china-counties-js/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork echarts-maps/echarts-china-counties-js on GitHub">Fork</a>
 			<a class="github-button" href="https://github.com/echarts-maps/echarts-china-counties-js" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star echarts-maps/echarts-china-counties-js on GitHub">Star</a><p>
-			<span class="medium"><a href="pages/index.html">Preview 3250 counties by provinces</a>, or <a href="pages/preview.html">all in one page</a></span>
+			<span class="medium"><a href="pages/index.html">Preview {{count}} counties by provinces</a>, or <a href="pages/preview.html">all in one page</a></span>
 		</div>
       </div>
     </body>

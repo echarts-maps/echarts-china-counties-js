@@ -24,3 +24,10 @@ if __name__ == '__main__':
                        count=len(registry['FILE_MAP']))
     with codecs.open('README.md', 'w', 'utf-8') as out:
         out.write(md)
+    index = jinja2_env.get_template('index.html.jj2')
+    new_index = index.render(profiles=content,
+                       sorted_provinces=sorted_provinces,
+                       file_map=registry['PINYIN_MAP'],
+                       count=len(registry['FILE_MAP']))
+    with codecs.open('index.html', 'w', 'utf-8') as out:
+        out.write(new_index)
